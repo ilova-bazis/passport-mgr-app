@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -7,16 +7,31 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  width: 90%;
+  margin: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* font-size: calc(10px + 2vmin); */
+  color: dodgerblue;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.dotGreen, .dotRed {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dotGreen {
+  background-color: #0c0;
+}
+.dotRed {
+  background-color: #c00;
 }
