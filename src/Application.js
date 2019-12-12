@@ -8,7 +8,7 @@ class Application extends React.Component {
 
     constructor(props){
         super(props);
-        this.getProfile = this.getProfile.bind(this);
+        this.startApplication = this.startApplication.bind(this);
     }
 
     state = {
@@ -30,14 +30,14 @@ class Application extends React.Component {
       });
     }
   
-    getProfile(){
+    startApplication(){
 
-        this.props.getProfile();
+        this.props.startApplication();
     }
     render(){
         return(
         <>
-            <Button variant="contained" onClick={this.getProfile}>Start New Application</Button>
+            <Button variant="contained" onClick={this.startApplication}>Start New Application</Button>
             <Typography variant="h6">Upload Document</Typography>
             <FileUpload fileUpload={this.fileUpload}></FileUpload>
             <TextField value={this.state.filename}></TextField>

@@ -1,20 +1,30 @@
 import axios from 'axios';
 import {baseURL} from '../config';
 
-export const startApplication = (a, cb)=>{
+export const startApplication = (msg, person)=>{
 
-    let application = {
-        applicationID: a.applicationID,
-        isoCode: a.isoCode,
-        status: a.status
-    }
-    axios.post(baseURL + "application", application).then(response=>{
-        axios.post(baseURL + "person/application/add/"+a.personID, { applicationID: response.data.application._id}).then(result=>
-            {
-                cb(response.data);
+    return new Promise((resolve, reject)=>{
+        if (msg.result !== undefined){
+            let a = msg.result;
+            let application = {
+                applicationID: a.applicationID,
+                isoCode: a.isoCode,
+                status: a.status
             }
-        ).catch(console.log);
-    }).catch(console.log);
+            axios.post(baseURL + "application", application).then(response=>{
+                axios.post(baseURL + "person/application/add/"+person._id, { applicationID: response.data.application._id}).then(result=>
+                    {
+                        resolve(response.data);
+                    }
+                ).catch(console.log);
+            }).catch(console.log);
+        }else {
+            console.log('No result recieved!');
+            reject(msg.error);
+        }
+    });
+   
+    
 }
 
 // export default startApplication;

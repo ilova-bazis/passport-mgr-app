@@ -62,6 +62,7 @@ export default class WebSocketio extends React.Component {
         let temp = this.state.reply;
         temp.unshift(e);
         this.setState({reply:[...temp]});
+        this.state.requests[e.id.toLowerCase()](e, this.state.person);
     }
 
     componentWillMount() {
@@ -117,22 +118,25 @@ export default class WebSocketio extends React.Component {
             try{
 
                 let dd = JSON.parse(new util.TextDecoder('utf-8').decode(e.data));
-                this.onMessage(dd);
-                console.log(dd);
+                
+                // console.log(dd);
                 if(dd.id !== undefined){
-                    console.log('sending ack');
-                 temp.send(this.converter({
-                     id: dd.id,
-                     method: "ack",
-                     version: 3,
-                     params:{
-                        receivedMSG: dd.params.length
-                     }
-                 }))
+                    if(dd.params !== undefined){
+                        console.log('sending ack');
+                        temp.send(this.converter({
+                            id: dd.id,
+                            method: "ack",
+                            version: 3,
+                            params:{
+                                receivedMSG: dd.params.length
+                            }
+                        }));
+                    }
+                    this.onMessage(dd);
                 }
             }
             catch(error) {
-                console.log("On OPEN Error while parsing");
+                console.log("Message Error while parsing", error);
                 // console.log(error);
             }
         };
@@ -166,16 +170,15 @@ export default class WebSocketio extends React.Component {
         let req = {
             version: 3, 
             id: reqUUID,
-            method: "user.get.profile",
+            method: "application.start",
             params: {
-                
+                isoCode: "TJK",
+                country: "TJK"
             }
         }
-        startApplication({applicationID: , isoCode: , status: , personID: , }, (res)=>{
-
-        })
+  
         this.state.ws.send(this.converter(req));
-        this.setState({requests: {...this.state.requests, [reqUUID]: startApplication }});
+        this.setState({requests: {...this.state.requests, [reqUUID.toLowerCase()]: startApplication }});
     }
 
     setWebSocketRules(e) {
