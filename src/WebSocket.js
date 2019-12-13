@@ -61,8 +61,15 @@ export default class WebSocketio extends React.Component {
         // console.log(temp);
         let temp = this.state.reply;
         temp.unshift(e);
-        this.setState({reply:[...temp]});
-        this.state.requests[e.id.toLowerCase()](e, this.state.person);
+        try{
+            this.state.requests[e.id.toLowerCase()](e, this.state.person);
+        }
+        catch{
+            console.log("Function not found.");
+        }
+        let reqs = this.state.requests;
+        delete reqs[e.id.toLowerCase()];
+        this.setState({reply:[...temp], requests: reqs});
     }
 
     componentWillMount() {

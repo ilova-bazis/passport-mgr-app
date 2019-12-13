@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {baseURL} from '../config';
+import {passURL} from '../config';
 
 export const startApplication = (msg, person)=>{
 
@@ -8,11 +8,11 @@ export const startApplication = (msg, person)=>{
             let a = msg.result;
             let application = {
                 applicationID: a.applicationID,
-                isoCode: a.isoCode,
+                isoCode: 'TJK',
                 status: a.status
             }
-            axios.post(baseURL + "application", application).then(response=>{
-                axios.post(baseURL + "person/application/add/"+person._id, { applicationID: response.data.application._id}).then(result=>
+            axios.post(passURL + "application", application).then(response=>{
+                axios.post(passURL + "person/application/add/"+person._id, { applicationID: response.data.application._id}).then(result=>
                     {
                         resolve(response.data);
                     }
