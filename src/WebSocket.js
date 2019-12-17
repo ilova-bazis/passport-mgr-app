@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, TextField, TextareaAutosize, Grid, Typography, Select, MenuItem } from '@material-ui/core';
+import { Button, TextField, TextareaAutosize, Grid, Typography, Select, MenuItem, Radio, RadioGroup, FormControlLabel} from '@material-ui/core';
 import Application from './Application';
 import uuid from 'uuid/v4';
 // import util, {TextEncoder} from 'util';
@@ -8,6 +8,7 @@ import ReactJson from 'react-json-view';
 
 import {startApplication} from './functions/ApplicationActions';
 import {getPeople} from './functions/GetPeople';
+import { submitDocument } from './functions/SubmitDocument';
 
 const wsState = [<span className="dotRed"></span>, <span className="dotGreen"></span>];
 const person = {
@@ -44,13 +45,15 @@ export default class WebSocketio extends React.Component {
             ws: null,
             people: null,
             person: person,
-            requests: {}
+            requests: {},
+            specs: {}
         }
 
         this.clearLog = this.clearLog.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
         this.disconnectWS = this.disconnectWS.bind(this);
         this.setWebSocketRules = this.setWebSocketRules.bind(this);
+        this.setDocumentType = this.setDocumentType.bind(this);
 
     }
     // const [reply, setReply] = React.useState([]);
@@ -60,19 +63,23 @@ export default class WebSocketio extends React.Component {
     onMessage(e){
         // console.log(temp);
         let temp = this.state.reply;
-        temp.unshift(e);
-        try{
-            this.state.requests[e.id.toLowerCase()](e, this.state.person);
-        }
-        catch{
-            console.log("Function not found.");
-        }
         let reqs = this.state.requests;
-        delete reqs[e.id.toLowerCase()];
+        if(e.id !== undefined){
+            try{
+                this.state.requests[e.id.toLowerCase()](e, this.state.person, this.state.specs).then(data=>{
+                    this.setState({specs:{...this.state.specs, ...data}});
+                });
+            }
+            catch{
+                console.log("Function not found.");
+            }
+            delete reqs[e.id.toLowerCase()];
+        }
+        temp.unshift(e);
         this.setState({reply:[...temp], requests: reqs});
     }
 
-    componentWillMount() {
+    componentDidMount() {
         getPeople().then(response=>{
             console.log(response.data.persons.filter(val=>val.device[0].session_id !== undefined));
             this.setState({people: response.data.persons.filter(val=>val.device[0].session_id !== undefined)});
@@ -95,7 +102,7 @@ export default class WebSocketio extends React.Component {
         this.state.ws.send(this.converter({
             id: uuid(),
             version: 3,
-            method: 'system..sync',
+            method: 'contact.sync',
             params: {
                 contacts: []
             }
@@ -126,7 +133,7 @@ export default class WebSocketio extends React.Component {
 
                 let dd = JSON.parse(new util.TextDecoder('utf-8').decode(e.data));
                 
-                // console.log(dd);
+                console.log(dd);
                 if(dd.id !== undefined){
                     if(dd.params !== undefined){
                         console.log('sending ack');
@@ -139,8 +146,9 @@ export default class WebSocketio extends React.Component {
                             }
                         }));
                     }
-                    this.onMessage(dd);
+                   
                 }
+                this.onMessage(dd);
             }
             catch(error) {
                 console.log("Message Error while parsing", error);
@@ -177,7 +185,7 @@ export default class WebSocketio extends React.Component {
         let req = {
             version: 3, 
             id: reqUUID,
-            method: "application.start",
+            method: "document.application.start",
             params: {
                 isoCode: "TJK",
                 country: "TJK"
@@ -188,6 +196,32 @@ export default class WebSocketio extends React.Component {
         this.setState({requests: {...this.state.requests, [reqUUID.toLowerCase()]: startApplication }});
     }
 
+    submitDocument = (filename) => {
+        let reqUUID = uuid();
+        let req = {
+            version: 3, 
+            id: reqUUID,
+            method: "document.submit",
+            params: {
+                applicationID: this.state.specs.application.applicationID,
+                documentType: this.state.specs.type,
+                countryCode: "TJK",
+                set: '8a7cf1fb-36a6-4b0a-ac61-97a9b9bd106b',
+                filename: filename
+            }
+        }
+  
+        console.log(req);
+        this.state.ws.send(this.converter(req));
+        this.setState({requests: {...this.state.requests, [reqUUID.toLowerCase()]: submitDocument }, specs: {...this.state.specs, filename: filename}});
+    }
+
+    setDocumentType(e) {
+
+        console.log(e);
+        console.log(e.target);
+        this.setState({specs:{...this.state.specs, type: e.target.value}});
+    }
     setWebSocketRules(e) {
         let person = this.state.people.filter(val=>val._id === e.target.value)
         this.setState({person: person[0]});
@@ -210,13 +244,13 @@ export default class WebSocketio extends React.Component {
                     <Grid>
                         <Grid>
                             <Typography variant='h5'>Document Manager steps:</Typography>
-                            <Application startApplication={this.startApplication}></Application>
+                            <RadioGroup aria-label="gender" name="gender1" value={this.state.specs.type} onChange={this.setDocumentType}>
+                                <FormControlLabel value="TAJIK_FOREIGN_PASSPORT_MAIN_PAGE" control={<Radio />} label="Passport" />
+                                <FormControlLabel value="SELFIE_PHOTO" control={<Radio />} label="Selfie" />
+                            </RadioGroup>
+                            <Application startApplication={this.startApplication} submitDocument={this.submitDocument}></Application>
                         </Grid>
-                        
-
-                            
                             <Button variant='contained' onClick={this.sendMessage}>Send Contact Sync</Button>
-
                     </Grid>
                     
                     

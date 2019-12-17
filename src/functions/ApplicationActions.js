@@ -1,7 +1,8 @@
 import axios from 'axios';
-import {passURL} from '../config';
+import {passURL, baseURL} from '../config';
 
-export const startApplication = (msg, person)=>{
+
+export const startApplication = (msg, person, specs)=>{
 
     return new Promise((resolve, reject)=>{
         if (msg.result !== undefined){
@@ -12,7 +13,7 @@ export const startApplication = (msg, person)=>{
                 status: a.status
             }
             axios.post(passURL + "application", application).then(response=>{
-                axios.post(passURL + "person/application/add/"+person._id, { applicationID: response.data.application._id}).then(result=>
+                axios.post(baseURL + "person/application/add/"+person._id, { applicationID: response.data.application._id }).then(result=>
                     {
                         resolve(response.data);
                     }

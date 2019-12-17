@@ -9,6 +9,7 @@ class Application extends React.Component {
     constructor(props){
         super(props);
         this.startApplication = this.startApplication.bind(this);
+        this.submitDocument = this.submitDocument.bind(this);
     }
 
     state = {
@@ -34,6 +35,10 @@ class Application extends React.Component {
 
         this.props.startApplication();
     }
+    submitDocument(){
+        console.log('triggered');
+        this.props.submitDocument(this.state.filename);
+    }
     render(){
         return(
         <>
@@ -41,7 +46,7 @@ class Application extends React.Component {
             <Typography variant="h6">Upload Document</Typography>
             <FileUpload fileUpload={this.fileUpload}></FileUpload>
             <TextField value={this.state.filename}></TextField>
-            <Button variant="outlined">Submit Document</Button>
+            <Button variant="outlined" onClick = {this.submitDocument}>Submit Document</Button>
         </>)
     }
 }
