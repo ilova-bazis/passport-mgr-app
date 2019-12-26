@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, TextField, TextareaAutosize, Grid, Typography, Select, MenuItem, Radio, RadioGroup, FormControlLabel} from '@material-ui/core';
+import { Button, TextField, TextareaAutosize, Menu, Grid, Typography, Select, MenuItem, Radio, RadioGroup, FormControlLabel} from '@material-ui/core';
 import Application from './Application';
 import uuid from 'uuid/v4';
 // import util, {TextEncoder} from 'util';
@@ -9,33 +9,45 @@ import ReactJson from 'react-json-view';
 import {startApplication} from './functions/ApplicationActions';
 import {getPeople} from './functions/GetPeople';
 import { submitDocument } from './functions/SubmitDocument';
+import Analytics from './Analytics';
+import faker from 'faker';
+import DocumentMgr from './DocumentMgr';
+import Chat from './Chat';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const wsState = [<span className="dotRed"></span>, <span className="dotGreen"></span>];
 const person = {
-	"contacts": [],
+    "contacts": [],
+    "device": [
+        {
+            "_id": "5dff12951e80a835c1fcc35a",
+            "device_name": "Winfield_Nicolas60",
+            "device_id": "054f38a4-bf95-4c3c-808a-c626cb2c9e40",
+            "platform": "ios",
+            "app_version": "v2.2.4 (2)",
+            "ip": "232.16.48.125",
+            "api_key": "4f54b7c3-2431-4ac1-807f-c5acd4ec1ed3",
+            "__v": 0,
+            "session_id": "470d3b0d-c40d-4f53-b27a-651ffbdd6e81"
+        }
+    ],
+    "accountList": [],
+    "_id": "5dff12961e80a835c1fcc541",
+    "firstName": "Walker",
+    "lastName": "Spencer",
+    "phone": "+9928810524131",
+    "email": "walker1@gmail.com",
+    "__v": 0,
+    "account_id": null
+};
 
-	"device": [{
-		"_id": "5d68da6919c7132a77c2c49c",
-		"device_name": "Dayton.Mante",
-		"device_id": "a39548ec-f330-4a56-a22c-4edf8a7b4935",
-		"platform": "ios",
-		"app_version": "v2.2.4 (1)",
-		"ip": "171.108.119.5",
-		"api_key": "4f54b7c3-2431-4ac1-807f-c5acd4ec1ed3",
-		"__v": 0,
-		"session_id": "7aee379a-d97a-4f5a-a5cb-062f9cc439e4"
-	}],
-	"accountList": [],
-	"_id": "5d68da6919c7132a77c2c4a1",
-	"firstName": "Sauer",
-	"lastName": "Hintz",
-	"phone": "+9926810065547",
-	"email": "testov.testovich@yahoo.com",
-	"__v": 0,
-	"account_id": null
-}
 
-
+const LinkO = (props)=>(<Link to="/document" />);
 export default class WebSocketio extends React.Component {
 
     constructor(props){
@@ -46,7 +58,8 @@ export default class WebSocketio extends React.Component {
             people: null,
             person: person,
             requests: {},
-            specs: {}
+            specs: {type: "TAJIK_FOREIGN_PASSPORT_MAIN_PAGE", conversation: []},
+            anchorEl: null,
         }
 
         this.clearLog = this.clearLog.bind(this);
@@ -54,6 +67,11 @@ export default class WebSocketio extends React.Component {
         this.disconnectWS = this.disconnectWS.bind(this);
         this.setWebSocketRules = this.setWebSocketRules.bind(this);
         this.setDocumentType = this.setDocumentType.bind(this);
+        this.sendInvite = this.sendInvite.bind(this);
+        this.setProfile = this.setProfile.bind(this);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
+        this.handleMenuClose = this.handleMenuClose.bind(this);
+
 
     }
     // const [reply, setReply] = React.useState([]);
@@ -102,9 +120,22 @@ export default class WebSocketio extends React.Component {
         this.state.ws.send(this.converter({
             id: uuid(),
             version: 3,
-            method: 'contact.sync',
+            method: 'session.addPushToken',
             params: {
-                contacts: []
+                devToken: false,
+                tokenType: 2,
+                token: "noviyUUID-"+uuid()
+            }
+        }));
+    }
+    sendInvite(){
+        this.state.ws.send(this.converter({
+            id: uuid(),
+            version: 3,
+            method: 'user.invite.contact',
+            params: {
+                language: "ENG",
+                phone: "+992927733015"
             }
         }));
     }
@@ -158,9 +189,6 @@ export default class WebSocketio extends React.Component {
 
         temp.onclose = (e)=> this.wsDisconnected(e);
     
-    
-      
-    
         const sendHeaders = (data) => {
             temp.send(this.converter({
                 version: 3,
@@ -195,6 +223,15 @@ export default class WebSocketio extends React.Component {
         this.state.ws.send(this.converter(req));
         this.setState({requests: {...this.state.requests, [reqUUID.toLowerCase()]: startApplication }});
     }
+    sendWS = (cb) => {
+        
+        let id = uuid();
+        let p = cb(this.state.person, this.state.specs, id);
+        console.log(p.request);
+        this.state.ws.send(this.converter(p.request));
+        this.setState({requests: {...this.state.requests, [id.toLowerCase()]: p.function}});
+        // cb()
+    }
 
     submitDocument = (filename) => {
         let reqUUID = uuid();
@@ -226,8 +263,39 @@ export default class WebSocketio extends React.Component {
         let person = this.state.people.filter(val=>val._id === e.target.value)
         this.setState({person: person[0]});
     }
+
+    setProfile(filename) {
+        let reqUUID = uuid();
+        let req = {
+            version: 3, 
+            id: reqUUID,
+            method: "user.set.profile",
+            params: {
+                firstname: this.state.person.firstName,
+                lastname: this.state.person.lastName,
+                username: faker.internet.domainWord(),
+                avatar: filename
+            }
+        }
+  
+        console.log(req);
+        this.state.ws.send(this.converter(req));
+    }
+
+    // [anchorEl, setAnchorEl] = React.useState(null);
+
+    handleMenuClick(event){
+        this.setState({anchorEl: event.currentTarget});
+    };
+
+    handleMenuClose(){
+        // e.preventDefault();
+        this.setState({anchorEl: null});
+    };
+
     // console.log(ws);
     render(){
+        console.log(this.state);
         return (<>
             <Grid container>
                 <Grid md={6}>
@@ -243,14 +311,47 @@ export default class WebSocketio extends React.Component {
                     </Grid>
                     <Grid>
                         <Grid>
-                            <Typography variant='h5'>Document Manager steps:</Typography>
-                            <RadioGroup aria-label="gender" name="gender1" value={this.state.specs.type} onChange={this.setDocumentType}>
-                                <FormControlLabel value="TAJIK_FOREIGN_PASSPORT_MAIN_PAGE" control={<Radio />} label="Passport" />
-                                <FormControlLabel value="SELFIE_PHOTO" control={<Radio />} label="Selfie" />
-                            </RadioGroup>
-                            <Application startApplication={this.startApplication} submitDocument={this.submitDocument}></Application>
-                        </Grid>
-                            <Button variant='contained' onClick={this.sendMessage}>Send Contact Sync</Button>
+                        <Router>
+                            <div>
+                                <div>
+                                    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleMenuClick}>
+                                        Open Menu
+                                    </Button>
+                                    <Menu
+                                        id="simple-menu"
+                                        anchorEl={this.state.anchorEl}
+                                        keepMounted
+                                        open={Boolean(this.state.anchorEl)}
+                                        onClose={this.handleMenuClose}
+                                    >
+                                        <Link to="/document"><MenuItem onClick={this.handleMenuClose}>Document</MenuItem></Link>
+                                        <Link to="/chat"><MenuItem onClick={this.handleMenuClose}>Chat</MenuItem></Link>
+                                        <Link to="/misc"><MenuItem onClick={this.handleMenuClose}>Misc</MenuItem></Link>
+                                    </Menu>
+                                </div>
+
+                                    {/* A <Switch> looks through its children <Route>s and
+                                        renders the first one that matches the current URL. */}
+                                    <Switch>
+                                        <Route path="/document">
+                                            <DocumentMgr setDocumentType={this.setDocumentType} specs={this.state.specs}></DocumentMgr>
+                                            <Application  sendWS = {this.sendWS} startApplication={this.startApplication} submitDocument={this.submitDocument} setProfile={this.setProfile}></Application>
+                                        </Route>
+                                        <Route path="/chat">
+                                            <Chat sendWS={this.sendWS} conversation={this.state.specs.conversation}></Chat>
+                                        </Route>
+                                        <Route path="/misc">
+                                            <Typography vairant="h5">Misc</Typography>
+                                            <Button variant='contained' onClick={this.sendMessage}>Send Contact Sync</Button>
+                                            <Button variant='contained' onClick={this.sendInvite}>Send Invite</Button>
+                                        </Route>
+                                    </Switch>
+                                </div>
+                            </Router>
+                                        </Grid>
+                         
+                            
+                            <Analytics></Analytics>
                     </Grid>
                     
                     
