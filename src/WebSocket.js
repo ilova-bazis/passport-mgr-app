@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, TextField, TextareaAutosize, Menu, Grid, Typography, Select, MenuItem, Radio, RadioGroup, FormControlLabel} from '@material-ui/core';
+import { Button, TextField, TextareaAutosize, MuiThemeProvider, Menu, Grid, Typography, Select, MenuItem, Radio, RadioGroup, FormControlLabel} from '@material-ui/core';
 import Application from './Application';
 import uuid from 'uuid/v4';
 // import util, {TextEncoder} from 'util';
@@ -19,6 +19,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+ 
 
 const wsState = [<span className="dotRed"></span>, <span className="dotGreen"></span>];
 const person = {
@@ -99,9 +100,9 @@ export default class WebSocketio extends React.Component {
 
     componentDidMount() {
         getPeople().then(response=>{
-            console.log(response.data.persons.filter(val=>val.device[0].session_id !== undefined));
+            // console.log(response.data.persons.filter(val=>val.device[0].session_id !== undefined));
             this.setState({people: response.data.persons.filter(val=>val.device[0].session_id !== undefined)});
-        });
+        }).catch(err=>console.log(err));
     }
     
     disconnectWS() {
@@ -168,14 +169,16 @@ export default class WebSocketio extends React.Component {
                 if(dd.id !== undefined){
                     if(dd.params !== undefined){
                         console.log('sending ack');
-                        temp.send(this.converter({
+                        let ack = {
                             id: dd.id,
                             method: "ack",
                             version: 3,
                             params:{
                                 receivedMSG: dd.params.length
                             }
-                        }));
+                        };
+                        console.log(ack)
+                        temp.send(this.converter(ack));
                     }
                    
                 }
@@ -227,7 +230,7 @@ export default class WebSocketio extends React.Component {
         
         let id = uuid();
         let p = cb(this.state.person, this.state.specs, id);
-        console.log(p.request);
+        // console.log(p.request);
         this.state.ws.send(this.converter(p.request));
         this.setState({requests: {...this.state.requests, [id.toLowerCase()]: p.function}});
         // cb()
@@ -248,15 +251,15 @@ export default class WebSocketio extends React.Component {
             }
         }
   
-        console.log(req);
+        // console.log(req);
         this.state.ws.send(this.converter(req));
         this.setState({requests: {...this.state.requests, [reqUUID.toLowerCase()]: submitDocument }, specs: {...this.state.specs, filename: filename}});
     }
 
     setDocumentType(e) {
 
-        console.log(e);
-        console.log(e.target);
+        // console.log(e);
+        // console.log(e.target);
         this.setState({specs:{...this.state.specs, type: e.target.value}});
     }
     setWebSocketRules(e) {
@@ -278,7 +281,7 @@ export default class WebSocketio extends React.Component {
             }
         }
   
-        console.log(req);
+        // console.log(req);
         this.state.ws.send(this.converter(req));
     }
 
@@ -295,7 +298,7 @@ export default class WebSocketio extends React.Component {
 
     // console.log(ws);
     render(){
-        console.log(this.state);
+        // console.log(this.state);
         return (<>
             <Grid container>
                 <Grid md={6}>
@@ -357,7 +360,7 @@ export default class WebSocketio extends React.Component {
                     
                 </Grid>
                 <Grid md={6}>
-                    <ReactJson src={this.state.reply}></ReactJson>
+                    <ReactJson theme="monokai" src={this.state.reply}></ReactJson>
                 </Grid>
             </Grid>
         </>)

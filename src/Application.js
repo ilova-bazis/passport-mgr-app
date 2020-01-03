@@ -5,7 +5,13 @@ import { Button, TextField, Typography } from '@material-ui/core';
 import FileUpload from './FileUpload';
 import { confirmDocument} from './functions/ConfirmDocument';
 import { submitApplication } from './functions/SubmitApplication';
+import {withStyles} from '@material-ui/core/styles';
 
+const style = {
+    root: {
+        color: "white"
+    }
+}
 class Application extends React.Component {
 
     constructor(props){
@@ -111,4 +117,4 @@ class Application extends React.Component {
     }
 }
 
-export default Application;
+export default withStyles(style)(Application);
