@@ -6,6 +6,7 @@ import FileUpload from './FileUpload';
 import { confirmDocument} from './functions/ConfirmDocument';
 import { submitApplication } from './functions/SubmitApplication';
 import {withStyles} from '@material-ui/core/styles';
+import { docGetCountries } from './functions/DocumentGetCountries';
 
 const style = {
     root: {
@@ -21,6 +22,7 @@ class Application extends React.Component {
         this.confirmDoc = this.confirmDoc.bind(this);
         this.submitDocument = this.submitDocument.bind(this);
         this.setProfile = this.setProfile.bind(this);
+        this.getCountries = this.getCountries.bind(this);
     }
 
     state = {
@@ -84,6 +86,19 @@ class Application extends React.Component {
             return {request: req, function: confirmDocument};
         });
     }
+    getCountries(){
+        this.props.sendWS((person, specs, uuid)=>{
+            let req = {
+                id: uuid,
+                version: 3,
+                method: "document.get.countries",
+                params: {
+                   
+                }
+            }
+            return {request: req, function: docGetCountries};
+        });
+    }
     submitApplica(){
         console.log("application submit");
         this.props.sendWS((person, specs, uuid)=>{
@@ -112,6 +127,7 @@ class Application extends React.Component {
             <Button variant="outlined" onClick = {this.submitDocument}>Submit Document</Button>
             <Button variant="outlined" onClick = {this.submitApplica}>Submit Application</Button>
             <Button variant="contained" onClick={this.setProfile}>Set Profile</Button>
+            <Button variant="contained" onClick={this.getCountries}>Get Countries</Button>
 
         </>)
     }

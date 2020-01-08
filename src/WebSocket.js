@@ -79,7 +79,7 @@ export default class WebSocketio extends React.Component {
     // const [ws, setWs] = React.useState(null);
     // let ws = null;
 
-    onMessage(e){
+    async onMessage(e){
         // console.log(temp);
         let temp = this.state.reply;
         let reqs = this.state.requests;
@@ -117,7 +117,7 @@ export default class WebSocketio extends React.Component {
 
         this.setState({reply:[]});
     }
-    sendMessage(){
+    async sendMessage(){
         this.state.ws.send(this.converter({
             id: uuid(),
             version: 3,
@@ -272,12 +272,12 @@ export default class WebSocketio extends React.Component {
         let req = {
             version: 3, 
             id: reqUUID,
-            method: "user.set.profile",
+            method: "contact.get",
             params: {
-                firstname: this.state.person.firstName,
-                lastname: this.state.person.lastName,
-                username: faker.internet.domainWord(),
-                avatar: filename
+                // firstname: this.state.person.firstName,
+                // lastname: this.state.person.lastName,
+                // username: faker.internet.domainWord(),
+                // avatar: filename
             }
         }
   
