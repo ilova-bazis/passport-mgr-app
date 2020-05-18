@@ -50,6 +50,7 @@ class ChatWindow extends React.Component {
         this.setState({message: e.target.value});
     }
     render(){
+        console.log(this.match);
         // console.log(this.props);
         const {classes} = this.props;
         return(<div>

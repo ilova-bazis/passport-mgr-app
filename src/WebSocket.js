@@ -26,15 +26,28 @@ const person = {
     "contacts": [],
     "device": [
         {
-            "_id": "5dff12951e80a835c1fcc35a",
-            "device_name": "Winfield_Nicolas60",
-            "device_id": "054f38a4-bf95-4c3c-808a-c626cb2c9e40",
-            "platform": "ios",
-            "app_version": "v2.2.4 (2)",
-            "ip": "232.16.48.125",
-            "api_key": "4f54b7c3-2431-4ac1-807f-c5acd4ec1ed3",
-            "__v": 0,
-            "session_id": "470d3b0d-c40d-4f53-b27a-651ffbdd6e81"
+            // "_id": "5dff12951e80a835c1fcc35a",
+            // "device_name": "Winfield_Nicolas60",
+            // "device_id": "054f38a4-bf95-4c3c-808a-c626cb2c9e40",
+            // "platform": "ios",
+            // "app_version": "v2.2.4 (2)",
+            // "ip": "232.16.48.125",
+            // "api_key": "4f54b7c3-2431-4ac1-807f-c5acd4ec1ed3",
+            // "__v": 0,
+            // "session_id": "470d3b0d-c40d-4f53-b27a-651ffbdd6e81",
+
+            // api_key: "71a7ec52-f0ad-420b-9f61-e9d31e4d5b2c",
+            // app_version: "v1.0.0 (beta)",
+            // device_id: "D25S407VGQ17",
+            // device_name: "Apple Inc., iMac17,1",
+            // platform: "macOS",
+            // session_id: "61bd252c-9be8-4b3a-b408-b045d862aad2",
+            api_key: "71a7ec52-f0ad-420b-9f61-e9d31e4d5b2c",
+            app_version: "v1.0.0 (beta)",
+            device_id: "D25S407VGQ17",
+            device_name: "Apple Inc., iMac17,1",
+            platform: "macOS",
+            session_id: "a2e7854d-55de-4922-ae62-cbd6d68b98d7"
         }
     ],
     "accountList": [],
@@ -155,7 +168,10 @@ export default class WebSocketio extends React.Component {
 
     connectWS = ()=> {
         let temp = new WebSocket("wss://wssdev.nexustls.com/wssprox1/http");
+        // let temp = new WebSocket("ws://localhost:8088/http");
+        // let temp = new WebSocket("ws://cs.nexus:8088/http");
 
+        
         temp.binaryType = 'arraybuffer';
         
         temp.onopen = (data) => sendHeaders(data);
@@ -218,8 +234,8 @@ export default class WebSocketio extends React.Component {
             id: reqUUID,
             method: "document.application.start",
             params: {
-                isoCode: "TJK",
-                country: "TJK"
+                isoCode: "TJ",
+                country: "TJ"
             }
         }
   
@@ -245,7 +261,7 @@ export default class WebSocketio extends React.Component {
             params: {
                 applicationID: this.state.specs.application.applicationID,
                 documentType: this.state.specs.type,
-                countryCode: "TJK",
+                countryCode: "TJ",
                 set: '8a7cf1fb-36a6-4b0a-ac61-97a9b9bd106b',
                 filename: filename
             }

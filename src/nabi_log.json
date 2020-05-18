@@ -1,0 +1,2887 @@
+[
+  {
+    "id": "BD411C54-A826-42E8-A619-E37046B3B342",
+    "params": [
+      {
+        "method": "message.changeStatus.notify",
+        "id": "F1ECFF4F-7FBF-49FA-929F-51114C68F55B",
+        "params": {
+          "status": 2,
+          "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "messageId": "202001269466056655900672",
+          "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA"
+        },
+        "version": 3
+      }
+    ],
+    "method": "system.queuedMessages",
+    "version": 3
+  },
+  {
+    "method": "system.queuedMessages",
+    "id": "F14868EF-64AB-4316-8696-AF42EF9CB554",
+    "version": 3,
+    "params": [
+      {
+        "version": 3,
+        "id": "BDE45784-4E52-4F46-BC3A-C15BA2A1E357",
+        "params": {
+          "state": 0,
+          "body": "Р",
+          "messageId": "202001269466056655900672",
+          "type": 1,
+          "createdAt": 1579010514344.739,
+          "author": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d",
+          "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA"
+        },
+        "method": "message.send.notify"
+      }
+    ]
+  },
+  {
+    "version": 3,
+    "params": {
+      "actionType": "typing",
+      "accountId": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d",
+      "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA"
+    },
+    "method": "channel.action.notify"
+  },
+  {
+    "version": 3,
+    "method": "channel.getAll",
+    "result": {
+      "conversation": [
+        {
+          "isPrivate": true,
+          "id": "069A66DC-4A5C-4EA5-93A9-887A675B1204",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "lastMessage": {
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "body": "1",
+            "state": 0,
+            "type": 1,
+            "messageId": "201912260052176431222784",
+            "channelId": "069A66DC-4A5C-4EA5-93A9-887A675B1204",
+            "createdAt": 1576766070398
+          },
+          "ownerId": "10:add12f65-a5ff-429d-a56b-6fd0fe992867",
+          "recipientsCount": 2,
+          "recipientLastSeenMessageId": "201912260052176431222784",
+          "channelType": "DM",
+          "active": 0,
+          "countNewMessages": 2,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1576771553476,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1576771553476,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1576766070397,
+              "lastDeliveryMessageTs": 1576771553476,
+              "role": "@messenger",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            },
+            {
+              "accountId": "10:add12f65-a5ff-429d-a56b-6fd0fe992867",
+              "role": "@messenger"
+            }
+          ],
+          "createdAt": 1576754463788
+        },
+        {
+          "createdAt": 1578221455600,
+          "id": "0F854681-F318-4D19-ADF2-923F45F22ADA",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "title": "Nabijon Tcell",
+          "ownerId": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d",
+          "recipientsCount": 2,
+          "lastMessage": {
+            "messageId": "202001269465140175310848",
+            "body": "К",
+            "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA",
+            "type": 1,
+            "createdAt": 1579010295839,
+            "state": 0,
+            "author": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d"
+          },
+          "recipientLastSeenMessageId": "202001269465140175310848",
+          "channelType": "DM",
+          "active": 1,
+          "nsfw": false,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1579010295838,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1579010295838,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578997759708,
+              "lastSeenMessageTs": 1579010295838,
+              "accountId": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d",
+              "role": "@messenger"
+            },
+            {
+              "lastSeenMessageTs": 1579010295838,
+              "lastDeliveryMessageTs": 1579010295838,
+              "role": "@messenger",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "141B277D-3AA1-424C-A71F-7E2F0A10AE46",
+          "roles": {
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "ownerId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+          "recipientsCount": 3,
+          "title": "Sadf",
+          "lastMessage": {
+            "media": {
+              "channel": {
+                "recipientRemove": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf"
+              }
+            },
+            "messageId": "201912261456856247963648",
+            "channelId": "141B277D-3AA1-424C-A71F-7E2F0A10AE46",
+            "createdAt": 1577100972164,
+            "type": 12,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0
+          },
+          "recipientLastSeenMessageId": "201912261456856247963648",
+          "channelType": "Group",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1577092354898,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1577092354898,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1577100972163,
+              "lastSeenMessageTs": 1577100972163,
+              "role": "@administrator",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastDeliveryMessageTs": 1577092354898,
+              "lastSeenMessageTs": 1577100972163,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1577100972163,
+              "lastSeenMessageTs": 1577100972163,
+              "role": "@member",
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce"
+            }
+          ],
+          "createdAt": 1574332022758
+        },
+        {
+          "createdAt": 1574531190064,
+          "id": "1B4D30B0-7D6D-47D6-A05D-18065166DC7F",
+          "title": "IOS - News",
+          "lastMessage": {
+            "messageId": "201912257775596405264384",
+            "channelId": "1B4D30B0-7D6D-47D6-A05D-18065166DC7F",
+            "createdAt": 1576223291423,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "type": 1,
+            "body": "1"
+          },
+          "recipientsCount": 4,
+          "roles": {
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "recipientLastSeenMessageId": "201912257775596405264384",
+          "ownerId": "10:31faaf21-7fee-4111-992e-20272873a422",
+          "channelType": "Group",
+          "topic": "Tamos for IOS",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1576222157433,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1576222157433,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1576223291422,
+              "lastSeenMessageTs": 1576223291422,
+              "accountId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1576223291422,
+              "lastSeenMessageTs": 1576223291422,
+              "accountId": "10:31faaf21-7fee-4111-992e-20272873a422",
+              "role": "@administrator"
+            },
+            {
+              "lastSeenMessageTs": 1576223291422,
+              "lastDeliveryMessageTs": 1576222157433,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1576223291422,
+              "lastDeliveryMessageTs": 1576223291422,
+              "role": "@member",
+              "accountId": "10:dc866146-b258-4a5f-a7cd-3970b884d128"
+            }
+          ],
+          "isPrivate": false
+        },
+        {
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578485332537,
+              "lastSeenMessageTs": 1577442131608,
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1578923718198,
+              "role": "@sharmanda",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            },
+            {
+              "lastDeliveryMessageTs": 1578923718198,
+              "lastSeenMessageTs": 1578923718198,
+              "role": "@member",
+              "accountId": "10:cdd65888-9817-44b8-9c68-30319814a691"
+            },
+            {
+              "lastSeenMessageTs": 1578923718198,
+              "lastDeliveryMessageTs": 1578923718198,
+              "role": "@administrator",
+              "accountId": "10:d144f9d6-1f81-4565-b71a-80a4e9f571c2"
+            }
+          ],
+          "id": "1D9B84C3-C8EA-4594-BE15-8A4400C33B8E",
+          "ownerId": "10:d144f9d6-1f81-4565-b71a-80a4e9f571c2",
+          "lastMessage": {
+            "media": {
+              "image": {
+                "mimeType": "image/png",
+                "w": 247,
+                "fileId": "7A6E1E26-3564-4FAC-94C8-7615322532EE",
+                "h": 797,
+                "size": 61541
+              }
+            },
+            "messageId": "202001269102007233548288",
+            "channelId": "1D9B84C3-C8EA-4594-BE15-8A4400C33B8E",
+            "createdAt": 1578923718198,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "type": 2
+          },
+          "roles": {
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "@sharmanda": {
+              "changeRoleType": "editAndDelete",
+              "permission": [
+                1,
+                2,
+                3,
+                5
+              ]
+            },
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            }
+          },
+          "recipientsCount": 4,
+          "recipientLastSeenMessageId": "202001269102007233548288",
+          "isPrivate": true,
+          "title": "Jjjjddxxxx",
+          "channelType": "Group",
+          "topic": "MegaDesc",
+          "nsfw": true,
+          "countNewMessages": 0,
+          "active": 1,
+          "currentRecipientRole": "@sharmanda",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "icon": "B6368C16-347D-461A-A3F0-032E64FAA534",
+          "createdAt": 1574679104562
+        },
+        {
+          "createdAt": 1577091988136,
+          "id": "1FD89480-A05C-46C7-9613-94CCBEBA285B",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "title": "Salom ba tu",
+          "recipientsCount": 2,
+          "lastMessage": {
+            "messageId": "201912261785820606763008",
+            "channelId": "1FD89480-A05C-46C7-9613-94CCBEBA285B",
+            "createdAt": 1577179403379,
+            "author": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+            "state": 0,
+            "type": 1,
+            "body": "1"
+          },
+          "roles": {
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            }
+          },
+          "recipientLastSeenMessageId": "201912261785820606763008",
+          "channelType": "Group",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1577179403378,
+          "currentRecipientRole": "@administrator",
+          "recipientLastDeliveryMessageTs": 1577179403378,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1577179403378,
+              "lastDeliveryMessageTs": 1577091995824,
+              "role": "@member",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastSeenMessageTs": 1577179403378,
+              "lastDeliveryMessageTs": 1577179403378,
+              "role": "@administrator",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "2265AEBD-E00E-4732-9238-3771B8AC4C2E",
+          "lastMessage": {
+            "updatedAt": 1578904923533,
+            "messageId": "202001269023119610482688",
+            "channelId": "2265AEBD-E00E-4732-9238-3771B8AC4C2E",
+            "createdAt": 1578904909924,
+            "type": 1,
+            "state": 2,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+          },
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientsCount": 2,
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientLastSeenMessageId": "202001269023119610482688",
+          "channelType": "DM",
+          "active": 1,
+          "nsfw": false,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1578407023610,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1578407023610,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1578904909923,
+              "lastDeliveryMessageTs": 1578407023610,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            },
+            {
+              "lastSeenMessageTs": 1578904909923,
+              "lastDeliveryMessageTs": 1578904909923,
+              "role": "@messenger",
+              "accountId": "10:cdd65888-9817-44b8-9c68-30319814a691"
+            }
+          ],
+          "createdAt": 1577288352449
+        },
+        {
+          "createdAt": 1574752576376,
+          "id": "24A272CE-5920-4250-9F4F-E00A137C2E11",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "lastMessage": {
+            "messageId": "201912257776402697293824",
+            "channelId": "24A272CE-5920-4250-9F4F-E00A137C2E11",
+            "createdAt": 1576223483658,
+            "type": 1,
+            "state": 0,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "body": "ok"
+          },
+          "recipientsCount": 2,
+          "ownerId": "tamos_account_id",
+          "recipientLastSeenMessageId": "201912257776402697293824",
+          "channelType": "DM",
+          "nsfw": false,
+          "active": 1,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1576215166429,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1576215166429,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1576223483657,
+              "lastDeliveryMessageTs": 1576215166429,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            },
+            {
+              "accountId": "tamos_account_id",
+              "role": "@messenger"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "272FFACD-B330-467C-8F10-E57F9DC06039",
+          "lastMessage": {
+            "messageId": "201912259674495697031168",
+            "channelId": "272FFACD-B330-467C-8F10-E57F9DC06039",
+            "createdAt": 1576676024294,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "type": 1,
+            "body": "🤗🤗🤗"
+          },
+          "ownerId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+          "roles": {
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientsCount": 2,
+          "recipientLastSeenMessageId": "201912259674495697031168",
+          "title": "Test for me",
+          "createdAt": 1575969143320,
+          "channelType": "Group",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1576235199259,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1576235199259,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1576244646866,
+              "lastSeenMessageTs": 1576676024293,
+              "role": "@administrator",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastSeenMessageTs": 1576676024293,
+              "lastDeliveryMessageTs": 1576235199259,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@member"
+            }
+          ],
+          "icon": "57FF335A-E9DC-4272-80ED-3E8A1AF1CBDF"
+        },
+        {
+          "isPrivate": true,
+          "id": "2AF5327E-C157-4BA6-B361-BED2A00A6AEF",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "lastMessage": {
+            "messageId": "202001265103359223009280",
+            "channelId": "2AF5327E-C157-4BA6-B361-BED2A00A6AEF",
+            "createdAt": 1577970366222,
+            "type": 1,
+            "state": 0,
+            "author": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+            "body": "23"
+          },
+          "title": "Okhunjon",
+          "recipientsCount": 2,
+          "recipientLastSeenMessageId": "202001265081722222153728",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "channelType": "DM",
+          "active": 0,
+          "countNewMessages": 2,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1577970366221,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1577970366221,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1577970366221,
+              "lastDeliveryMessageTs": 1577337941121,
+              "role": "@messenger",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastDeliveryMessageTs": 1577970366221,
+              "lastSeenMessageTs": 1577965207558,
+              "role": "@messenger",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "createdAt": 1574399778936
+        },
+        {
+          "isPrivate": true,
+          "id": "04DCF0F5-F68F-4BC1-9CC4-9C21F75153E5",
+          "title": "Ggg",
+          "lastMessage": {
+            "messageId": "202001268998596865560576",
+            "channelId": "04DCF0F5-F68F-4BC1-9CC4-9C21F75153E5",
+            "createdAt": 1578899063245,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "type": 1,
+            "state": 0,
+            "body": "meshad"
+          },
+          "recipientsCount": 2,
+          "roles": {
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientLastSeenMessageId": "202001268998596865560576",
+          "ownerId": "10:985b4f17-ce89-46ea-ae75-3457bb691a36",
+          "channelType": "Group",
+          "active": 1,
+          "nsfw": false,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1578385261018,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1578385261018,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1578385261018,
+              "accountId": "10:985b4f17-ce89-46ea-ae75-3457bb691a36",
+              "role": "@administrator"
+            },
+            {
+              "lastDeliveryMessageTs": 1578385261018,
+              "lastSeenMessageTs": 1578899063245,
+              "role": "@member",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "createdAt": 1577510269135
+        },
+        {
+          "createdAt": 1574349295693,
+          "id": "36CA8091-186B-41FC-977C-7663DB412B77",
+          "ownerId": "10:d1e06b9b-cf28-4381-917c-f212fe944abb",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientsCount": 2,
+          "title": "Nabi",
+          "recipientLastSeenMessageId": "201912257487584056315904",
+          "lastMessage": {
+            "messageId": "201912257487584056315904",
+            "channelId": "36CA8091-186B-41FC-977C-7663DB412B77",
+            "createdAt": 1576154623928,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "type": 1,
+            "state": 0,
+            "body": "1"
+          },
+          "channelType": "DM",
+          "active": 1,
+          "nsfw": false,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1574427905122,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1574427905122,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1574427905122,
+              "lastSeenMessageTs": 1576154623927,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            },
+            {
+              "lastDeliveryMessageTs": 1574660385415,
+              "lastSeenMessageTs": 1574867363937,
+              "role": "@messenger",
+              "accountId": "10:d1e06b9b-cf28-4381-917c-f212fe944abb"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "createdAt": 1575449736253,
+          "id": "40FDEBFF-9192-49A8-9AF8-362F2FD5693E",
+          "lastMessage": {
+            "media": {},
+            "messageId": "202001265041743714455552",
+            "channelId": "40FDEBFF-9192-49A8-9AF8-362F2FD5693E",
+            "createdAt": 1577955675940,
+            "type": 1,
+            "author": "10:dc866146-b258-4a5f-a7cd-3970b884d128",
+            "state": 0,
+            "body": "Test"
+          },
+          "title": "Madina Bucha",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientsCount": 2,
+          "recipientLastSeenMessageId": "201912254917212739997696",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "channelType": "DM",
+          "active": 0,
+          "countNewMessages": 1,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1577955675939,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1577955675939,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1575541799650,
+              "lastDeliveryMessageTs": 1577955675939,
+              "role": "@messenger",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            },
+            {
+              "accountId": "10:dc866146-b258-4a5f-a7cd-3970b884d128",
+              "lastSeenMessageTs": 1577955675939,
+              "role": "@messenger"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "5A9DE9CC-D4AA-40D5-B261-7282DF752015",
+          "lastMessage": {
+            "messageId": "202001265802681216405504",
+            "channelId": "5A9DE9CC-D4AA-40D5-B261-7282DF752015",
+            "createdAt": 1578137097578,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "type": 1,
+            "state": 0,
+            "body": "123"
+          },
+          "ownerId": "10:31faaf21-7fee-4111-992e-20272873a422",
+          "recipientsCount": 2,
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientLastSeenMessageId": "202001265802681216405504",
+          "channelType": "DM",
+          "active": 0,
+          "countNewMessages": 0,
+          "nsfw": true,
+          "currentRecipientRole": "@messenger",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1577343376831,
+              "lastSeenMessageTs": 1577343376831,
+              "role": "@messenger",
+              "accountId": "10:31faaf21-7fee-4111-992e-20272873a422"
+            },
+            {
+              "lastSeenMessageTs": 1578137097577,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            }
+          ],
+          "createdAt": 1576221840205
+        },
+        {
+          "icon": "3ABEA456-4E8C-4468-8DAC-A7855307E0F6",
+          "id": "5DFE894E-74EB-4E11-852D-465CCA51A28C",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "title": "Salom chat",
+          "recipientsCount": 1,
+          "createdAt": 1577090734169,
+          "recipientLastSeenMessageId": "202001269027710938910720",
+          "roles": {
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            },
+            "@subscriber": {
+              "permission": [
+                0,
+                1,
+                2
+              ],
+              "changeRoleType": "edit"
+            }
+          },
+          "lastMessage": {
+            "messageId": "202001269027710938910720",
+            "channelId": "5DFE894E-74EB-4E11-852D-465CCA51A28C",
+            "createdAt": 1578906004581,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "type": 1,
+            "state": 0,
+            "body": "Fjf"
+          },
+          "channelType": "Broadcast",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "currentRecipientRole": "@administrator",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@administrator",
+              "lastSeenMessageTs": 1578906004581
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "createdAt": 1577090862373,
+          "id": "75621D31-D012-44F8-9A6F-1D55C5463D41",
+          "roles": {
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "lastMessage": {
+            "messageId": "201912261416822916517888",
+            "channelId": "75621D31-D012-44F8-9A6F-1D55C5463D41",
+            "createdAt": 1577091427473,
+            "type": 1,
+            "state": 0,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "body": "123"
+          },
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientsCount": 5,
+          "recipientLastSeenMessageId": "201912261416822916517888",
+          "title": "Salom One",
+          "channelType": "Group",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "currentRecipientRole": "@administrator",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1577091427473,
+              "lastSeenMessageTs": 1577091427473,
+              "accountId": "10:31faaf21-7fee-4111-992e-20272873a422",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1577091427473,
+              "lastDeliveryMessageTs": 1577091427473,
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf",
+              "role": "@member"
+            },
+            {
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@administrator",
+              "lastSeenMessageTs": 1577091427473
+            },
+            {
+              "lastSeenMessageTs": 1577091427473,
+              "lastDeliveryMessageTs": 1577091427473,
+              "role": "@member",
+              "accountId": "10:cdd65888-9817-44b8-9c68-30319814a691"
+            },
+            {
+              "accountId": "11:e61f0c29-5b51-4926-bf1c-f53bc710db6d",
+              "role": "@member"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "createdAt": 1578117635063,
+          "id": "852C06E6-CF73-4524-AB64-E5FDFBB773FA",
+          "ownerId": "10:dfc431cb-a53b-4be2-aafd-3de8ca8f5f34",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "lastMessage": {
+            "messageId": "202001266499196285095936",
+            "channelId": "852C06E6-CF73-4524-AB64-E5FDFBB773FA",
+            "createdAt": 1578303159711,
+            "type": 1,
+            "state": 0,
+            "author": "10:dfc431cb-a53b-4be2-aafd-3de8ca8f5f34",
+            "body": "😂"
+          },
+          "recipientsCount": 2,
+          "recipientLastSeenMessageId": "202001266499196285095936",
+          "channelType": "DM",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1578303159710,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1578303159710,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1578303159710,
+              "lastDeliveryMessageTs": 1578303159710,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            },
+            {
+              "lastSeenMessageTs": 1578303159710,
+              "lastDeliveryMessageTs": 1578303077292,
+              "accountId": "10:dfc431cb-a53b-4be2-aafd-3de8ca8f5f34",
+              "role": "@messenger"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "9B60B989-279E-436F-8962-1A3FF9FBCCC6",
+          "lastMessage": {
+            "media": {
+              "image": {
+                "fileId": "BC81871C-D9E0-4E9C-BE8C-48FB4B8E0FC0",
+                "w": 420,
+                "mimeType": "png",
+                "h": 420
+              }
+            },
+            "messageId": "202001269060475919011840",
+            "channelId": "9B60B989-279E-436F-8962-1A3FF9FBCCC6",
+            "createdAt": 1578913816362,
+            "type": 2,
+            "state": 0,
+            "author": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a"
+          },
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientsCount": 2,
+          "recipientLastSeenMessageId": "202001269060475919011840",
+          "title": "Фарзон Носири",
+          "channelType": "DM",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1578306094909,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1578306094909,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578903798341,
+              "lastSeenMessageTs": 1578913816361,
+              "role": "@messenger",
+              "accountId": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a"
+            },
+            {
+              "lastSeenMessageTs": 1578913816361,
+              "lastDeliveryMessageTs": 1578306094909,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            }
+          ],
+          "createdAt": 1578220445889
+        },
+        {
+          "isPrivate": true,
+          "id": "9C2B025D-9D33-478C-A406-63ED5E06624F",
+          "title": "Twallo",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientsCount": 2,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578992002185,
+              "lastSeenMessageTs": 1578992002185,
+              "role": "@member",
+              "accountId": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d"
+            },
+            {
+              "lastSeenMessageTs": 1578992002185,
+              "lastDeliveryMessageTs": 1578931050943,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@administrator"
+            }
+          ],
+          "roles": {
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "@Echkicha": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientLastSeenMessageId": "202001269388411033358336",
+          "lastMessage": {
+            "messageId": "202001269388411033358336",
+            "channelId": "9C2B025D-9D33-478C-A406-63ED5E06624F",
+            "createdAt": 1578992002186,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "type": 1,
+            "body": "2"
+          },
+          "channelType": "Group",
+          "topic": "sdf",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1578931050943,
+          "currentRecipientRole": "@administrator",
+          "recipientLastDeliveryMessageTs": 1578931050943,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "icon": "E5236A79-700D-4F81-AB83-DC8AE637BA0A",
+          "createdAt": 1578224018195
+        },
+        {
+          "createdAt": 1577288001522,
+          "id": "9FFED75C-E185-48C3-BC78-658F7ED9CE5F",
+          "lastMessage": {
+            "messageId": "201912262241315167670272",
+            "channelId": "9FFED75C-E185-48C3-BC78-658F7ED9CE5F",
+            "createdAt": 1577288001745,
+            "type": 1,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "body": "123"
+          },
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientsCount": 2,
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientLastSeenMessageId": "201912262241315167670272",
+          "channelType": "DM",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "currentRecipientRole": "@messenger",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger",
+              "lastSeenMessageTs": 1577288001744
+            },
+            {
+              "lastSeenMessageTs": 1577288001744,
+              "lastDeliveryMessageTs": 1577288001744,
+              "role": "@messenger",
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "AD107329-9B8C-462B-9870-9BC42CFA9733",
+          "lastMessage": {
+            "messageId": "201912262194118669635584",
+            "channelId": "AD107329-9B8C-462B-9870-9BC42CFA9733",
+            "createdAt": 1577276749223,
+            "type": 1,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "body": "2"
+          },
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientsCount": 1,
+          "title": "Salom ba hamma",
+          "recipientLastSeenMessageId": "201912262194118669635584",
+          "roles": {
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "@subscriber": {
+              "changeRoleType": "edit",
+              "permission": []
+            }
+          },
+          "channelType": "Broadcast",
+          "nsfw": false,
+          "active": 1,
+          "countNewMessages": 0,
+          "currentRecipientRole": "@administrator",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1577276749222,
+              "role": "@administrator",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "createdAt": 1577102519239
+        },
+        {
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578217738048,
+              "lastSeenMessageTs": 1578217738048,
+              "role": "@member",
+              "accountId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662"
+            },
+            {
+              "accountId": "10:2b934097-ec8a-4473-9734-5b62a1995709",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1578217738048,
+              "lastDeliveryMessageTs": 1578217738048,
+              "role": "@member",
+              "accountId": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a"
+            },
+            {
+              "lastDeliveryMessageTs": 1578185004475,
+              "lastSeenMessageTs": 1578217738048,
+              "role": "@administrator",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            },
+            {
+              "lastSeenMessageTs": 1578217738048,
+              "lastDeliveryMessageTs": 1578217738048,
+              "role": "@member",
+              "accountId": "10:adf9eb69-ef01-4163-bbb5-64027a8b3e34"
+            },
+            {
+              "lastDeliveryMessageTs": 1578217738048,
+              "lastSeenMessageTs": 1578217738048,
+              "role": "@member",
+              "accountId": "10:b68604ec-a10e-4316-ac14-ee39d0c55a2a"
+            }
+          ],
+          "id": "539C73C0-8265-4EFD-BDD5-5F5FC37049A2",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "isPrivate": true,
+          "recipientsCount": 6,
+          "roles": {
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            }
+          },
+          "lastMessage": {
+            "media": {
+              "channel": {
+                "icon": "4B3145A1-5C4A-440B-8FE7-0E467B4DB004"
+              }
+            },
+            "messageId": "202001266140911866482688",
+            "channelId": "539C73C0-8265-4EFD-BDD5-5F5FC37049A2",
+            "createdAt": 1578217738049,
+            "type": 14,
+            "state": 0,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+          },
+          "title": "Salom",
+          "recipientLastSeenMessageId": "202001266140911866482688",
+          "channelType": "Group",
+          "topic": "Bezdelniki",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1578185004475,
+          "currentRecipientRole": "@administrator",
+          "recipientLastDeliveryMessageTs": 1578185004475,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "icon": "4B3145A1-5C4A-440B-8FE7-0E467B4DB004",
+          "createdAt": 1577374800165
+        },
+        {
+          "isPrivate": true,
+          "id": "1D8FCD3E-5604-471C-AA71-AD12EAB0547E",
+          "ownerId": "10:d1e06b9b-cf28-4381-917c-f212fe944abb",
+          "roles": {
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            },
+            "@janivar": {
+              "changeRoleType": "editAndDelete",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "lastMessage": {
+            "replyMessageId": "201912257018279397167104",
+            "messageId": "201912259259484482834432",
+            "channelId": "1D8FCD3E-5604-471C-AA71-AD12EAB0547E",
+            "createdAt": 1576577077910,
+            "type": 1,
+            "state": 0,
+            "author": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+            "body": "ewrwerw"
+          },
+          "recipientsCount": 7,
+          "recipientLastSeenMessageId": "201912259259484482834432",
+          "title": "Janviariuses",
+          "channelType": "Group",
+          "active": 1,
+          "nsfw": false,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1576045624850,
+          "currentRecipientRole": "@janivar",
+          "recipientLastDeliveryMessageTs": 1576045624850,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1576577077909,
+              "lastDeliveryMessageTs": 1576070214151,
+              "role": "@member",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastSeenMessageTs": 1576577077909,
+              "lastDeliveryMessageTs": 1576577077909,
+              "role": "@member",
+              "accountId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662"
+            },
+            {
+              "lastSeenMessageTs": 1576577077909,
+              "lastDeliveryMessageTs": 1576577077909,
+              "role": "@member",
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf"
+            },
+            {
+              "lastSeenMessageTs": 1576577077909,
+              "lastDeliveryMessageTs": 1576045624850,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@janivar"
+            },
+            {
+              "lastSeenMessageTs": 1576577077909,
+              "lastDeliveryMessageTs": 1576577077909,
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1576070214151,
+              "lastDeliveryMessageTs": 1576070214151,
+              "accountId": "10:d1e06b9b-cf28-4381-917c-f212fe944abb",
+              "role": "@administrator"
+            },
+            {
+              "lastSeenMessageTs": 1576577077909,
+              "lastDeliveryMessageTs": 1576577077909,
+              "accountId": "10:dc866146-b258-4a5f-a7cd-3970b884d128",
+              "role": "@member"
+            }
+          ],
+          "createdAt": 1574427807647
+        },
+        {
+          "isPrivate": true,
+          "id": "B6581E3F-2394-4E00-8143-2E04A4F9F968",
+          "lastMessage": {
+            "messageId": "201912260075601421930496",
+            "channelId": "B6581E3F-2394-4E00-8143-2E04A4F9F968",
+            "createdAt": 1576771655351,
+            "type": 1,
+            "state": 0,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "body": "123"
+          },
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientsCount": 2,
+          "title": "Salom",
+          "recipientLastSeenMessageId": "201912260075601421930496",
+          "roles": {
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "channelType": "Group",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "currentRecipientRole": "@administrator",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1576771655350,
+              "lastSeenMessageTs": 1576771655350,
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1576771655350,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@administrator"
+            }
+          ],
+          "createdAt": 1576752416358
+        },
+        {
+          "createdAt": 1577168531120,
+          "icon": "2933F5DF-26DA-4C24-B014-07FBF2B11410",
+          "lastMessage": {
+            "media": {
+              "channel": {
+                "icon": "2933F5DF-26DA-4C24-B014-07FBF2B11410"
+              }
+            },
+            "messageId": "201912262833553455190016",
+            "channelId": "C6D4FEAA-68D5-40B1-9000-A5DA9F568225",
+            "createdAt": 1577429202356,
+            "type": 14,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0
+          },
+          "title": "Salom",
+          "recipientsCount": 1,
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientLastSeenMessageId": "201912262833553455190016",
+          "id": "C6D4FEAA-68D5-40B1-9000-A5DA9F568225",
+          "roles": {
+            "@subscriber": {
+              "permission": [],
+              "changeRoleType": "edit"
+            },
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            }
+          },
+          "channelType": "Broadcast",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "currentRecipientRole": "@administrator",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1577429202355,
+              "role": "@administrator",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "E31BD668-612C-4613-A625-13D05E7E96B6",
+          "title": "Test",
+          "roles": {
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            },
+            "@eeee": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@ddsdssdds": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@ee": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@dddd": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@d": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@deewe": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@ds": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@ew": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@sddsdsds": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@e": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@2": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@erq": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@dee": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@1": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "edit"
+            }
+          },
+          "ownerId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+          "lastMessage": {
+            "messageId": "201912257780234617622528",
+            "channelId": "E31BD668-612C-4613-A625-13D05E7E96B6",
+            "createdAt": 1576224397259,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "type": 1,
+            "body": "1"
+          },
+          "recipientLastSeenMessageId": "201912257780234617622528",
+          "recipientsCount": 5,
+          "channelType": "Group",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1574402692596,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1574402692596,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1576224397258,
+              "lastSeenMessageTs": 1576224397258,
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1574402692596,
+              "lastSeenMessageTs": 1576224397258,
+              "role": "@member",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            },
+            {
+              "lastDeliveryMessageTs": 1576224397258,
+              "lastSeenMessageTs": 1576224397258,
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1576224397258,
+              "lastDeliveryMessageTs": 1576224397258,
+              "accountId": "10:b68604ec-a10e-4316-ac14-ee39d0c55a2a",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1576224397258,
+              "role": "@member",
+              "accountId": "10:cdd65888-9817-44b8-9c68-30319814a691"
+            }
+          ],
+          "createdAt": 1574329333888
+        },
+        {
+          "createdAt": 1577287955371,
+          "id": "FE0DD465-9351-404A-A81C-544487E1F7DB",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientsCount": 2,
+          "lastMessage": {
+            "messageId": "202001269022406369087488",
+            "channelId": "FE0DD465-9351-404A-A81C-544487E1F7DB",
+            "createdAt": 1578904739873,
+            "type": 1,
+            "state": 0,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "body": "1"
+          },
+          "recipientLastSeenMessageId": "202001269022406369087488",
+          "channelType": "DM",
+          "active": 1,
+          "nsfw": false,
+          "countNewMessages": 0,
+          "currentRecipientRole": "@messenger",
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1578904739873,
+              "role": "@messenger",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            },
+            {
+              "accountId": "11:e61f0c29-5b51-4926-bf1c-f53bc710db6d",
+              "role": "@messenger"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "isPrivate": true,
+          "id": "CC1082E5-5048-4305-82BB-047D779EA317",
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "ownerId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662",
+          "recipientsCount": 2,
+          "lastMessage": {
+            "messageId": "201912257015509826932736",
+            "channelId": "CC1082E5-5048-4305-82BB-047D779EA317",
+            "createdAt": 1576042072661,
+            "type": 1,
+            "state": 0,
+            "author": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662",
+            "body": "salom"
+          },
+          "recipientLastSeenMessageId": "201912257015509826932736",
+          "channelType": "DM",
+          "nsfw": true,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1576042072660,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1576042072660,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1576042072660,
+              "lastDeliveryMessageTs": 1576041642713,
+              "accountId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662",
+              "role": "@messenger"
+            },
+            {
+              "lastDeliveryMessageTs": 1576042072660,
+              "lastSeenMessageTs": 1576042072660,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@messenger"
+            }
+          ],
+          "createdAt": 1576000025334
+        },
+        {
+          "isPrivate": true,
+          "id": "D494B4D3-4A18-414D-83E9-FFF7E37DD529",
+          "lastMessage": {
+            "messageId": "201912257850500534243328",
+            "channelId": "D494B4D3-4A18-414D-83E9-FFF7E37DD529",
+            "createdAt": 1576241149959,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "type": 1,
+            "state": 0,
+            "body": "asdf"
+          },
+          "title": "Tesss",
+          "recipientsCount": 4,
+          "roles": {
+            "@7": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@8": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "edit"
+            },
+            "@5": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@12": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@sadf": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@4": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@3": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@9": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@1": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "recipientLastSeenMessageId": "201912257850500534243328",
+          "channelType": "Group",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1574420182665,
+          "currentRecipientRole": "@administrator",
+          "recipientLastDeliveryMessageTs": 1574420182665,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1576241149958,
+              "lastDeliveryMessageTs": 1576241149958,
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1576241149958,
+              "lastSeenMessageTs": 1576241149958,
+              "role": "@7",
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf"
+            },
+            {
+              "lastSeenMessageTs": 1576241149958,
+              "lastDeliveryMessageTs": 1574420182665,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@administrator"
+            },
+            {
+              "lastDeliveryMessageTs": 1576241149958,
+              "lastSeenMessageTs": 1576241149958,
+              "role": "@member",
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce"
+            }
+          ],
+          "createdAt": 1574336303394
+        },
+        {
+          "createdAt": 1576752078626,
+          "id": "B03F6E34-0FA8-40C4-8CEC-04D4D4BC7A5F",
+          "title": "Murodkhon",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "lastMessage": {
+            "messageId": "202001265370869851754496",
+            "channelId": "B03F6E34-0FA8-40C4-8CEC-04D4D4BC7A5F",
+            "createdAt": 1578034145726,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "state": 0,
+            "type": 1,
+            "body": "1"
+          },
+          "roles": {
+            "@messenger": {
+              "permission": [
+                1,
+                2,
+                3,
+                8
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientLastSeenMessageId": "202001265370869851754496",
+          "recipientsCount": 2,
+          "channelType": "DM",
+          "nsfw": false,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1577528901994,
+          "currentRecipientRole": "@messenger",
+          "recipientLastDeliveryMessageTs": 1577528901994,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1578034145725,
+              "lastDeliveryMessageTs": 1578034145725,
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf",
+              "role": "@messenger"
+            },
+            {
+              "lastSeenMessageTs": 1578034145725,
+              "lastDeliveryMessageTs": 1577528901994,
+              "role": "@messenger",
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+            }
+          ],
+          "isPrivate": true
+        },
+        {
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578470466011,
+              "lastSeenMessageTs": 1578470466011,
+              "role": "@member",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastDeliveryMessageTs": 1578814685515,
+              "lastSeenMessageTs": 1578819563227,
+              "role": "@member",
+              "accountId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662"
+            },
+            {
+              "lastDeliveryMessageTs": 1578064747985,
+              "lastSeenMessageTs": 1578064747985,
+              "role": "@janivarius",
+              "accountId": "10:31faaf21-7fee-4111-992e-20272873a422"
+            },
+            {
+              "lastDeliveryMessageTs": 1578921863892,
+              "lastSeenMessageTs": 1578921863892,
+              "accountId": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a",
+              "role": "@administrator"
+            },
+            {
+              "lastDeliveryMessageTs": 1578921863892,
+              "lastSeenMessageTs": 1578921863892,
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf",
+              "role": "@member"
+            },
+            {
+              "accountId": "10:84ab1663-9fbb-48a5-bcbc-75746f297a1b",
+              "lastSeenMessageTs": 1578041453605,
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1578908480985,
+              "lastSeenMessageTs": 1578921863892,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1578246219399,
+              "lastDeliveryMessageTs": 1578386233878,
+              "accountId": "10:adf9eb69-ef01-4163-bbb5-64027a8b3e34",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1578908480985,
+              "lastDeliveryMessageTs": 1578905870563,
+              "role": "@member",
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce"
+            },
+            {
+              "lastDeliveryMessageTs": 1578387961025,
+              "lastSeenMessageTs": 1578326876115,
+              "role": "@member",
+              "accountId": "10:b68604ec-a10e-4316-ac14-ee39d0c55a2a"
+            },
+            {
+              "lastSeenMessageTs": 1578468875926,
+              "role": "@member",
+              "accountId": "10:c464d44b-4006-4677-8a6f-9afca81a722e"
+            },
+            {
+              "lastDeliveryMessageTs": 1578908480985,
+              "lastSeenMessageTs": 1578921863892,
+              "role": "@member",
+              "accountId": "10:cdd65888-9817-44b8-9c68-30319814a691"
+            },
+            {
+              "lastSeenMessageTs": 1577966573832,
+              "lastDeliveryMessageTs": 1577966573832,
+              "role": "@member",
+              "accountId": "10:dc866146-b258-4a5f-a7cd-3970b884d128"
+            },
+            {
+              "lastDeliveryMessageTs": 1578921863892,
+              "lastSeenMessageTs": 1578921863892,
+              "role": "@member",
+              "accountId": "10:dfc431cb-a53b-4be2-aafd-3de8ca8f5f34"
+            }
+          ],
+          "id": "F115816E-5245-4ED4-AEC1-5629F3396E71",
+          "lastMessage": {
+            "messageId": "202001269094229710475264",
+            "channelId": "F115816E-5245-4ED4-AEC1-5629F3396E71",
+            "createdAt": 1578921863893,
+            "author": "10:cdd65888-9817-44b8-9c68-30319814a691",
+            "state": 0,
+            "type": 1,
+            "body": "I"
+          },
+          "roles": {
+            "@janivarius": {
+              "changeRoleType": "editAndDelete",
+              "permission": [
+                0,
+                2,
+                3,
+                4,
+                7,
+                8
+              ]
+            },
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            }
+          },
+          "recipientsCount": 14,
+          "title": "JayJay",
+          "recipientLastSeenMessageId": "202001269094229710475264",
+          "ownerId": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a",
+          "createdAt": 1576240163211,
+          "channelType": "Group",
+          "topic": "Jay jay hop hey lala ley ley ley ley ley",
+          "nsfw": true,
+          "countNewMessages": 0,
+          "active": 1,
+          "recipientLastSeenMessageTs": 1578908480985,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1578908480985,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "icon": "816EA773-B65B-4BDC-864C-5E87AFE8C08E",
+          "isPrivate": true
+        },
+        {
+          "recipients": [
+            {
+              "lastSeenMessageTs": 1576833940013,
+              "lastDeliveryMessageTs": 1576833940013,
+              "role": "@administrator",
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084"
+            },
+            {
+              "lastDeliveryMessageTs": 1576833940013,
+              "lastSeenMessageTs": 1576833940013,
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1576833940013,
+              "lastDeliveryMessageTs": 1576833940013,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1576833940013,
+              "lastDeliveryMessageTs": 1576833940013,
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce",
+              "role": "@member"
+            }
+          ],
+          "id": "F08149D3-9AB1-40C1-9E29-282D8A295CF6",
+          "roles": {
+            "@administrator": {
+              "changeRoleType": "nothing",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            "@member": {
+              "changeRoleType": "edit",
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "lastMessage": {
+            "media": {
+              "channel": {
+                "recipientRemove": "10:cdd65888-9817-44b8-9c68-30319814a691"
+              }
+            },
+            "messageId": "201912260336842233090048",
+            "channelId": "F08149D3-9AB1-40C1-9E29-282D8A295CF6",
+            "createdAt": 1576833940013,
+            "type": 12,
+            "author": "10:cdd65888-9817-44b8-9c68-30319814a691",
+            "state": 0
+          },
+          "ownerId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+          "recipientsCount": 4,
+          "recipientLastSeenMessageId": "201912260336842233090048",
+          "title": "Add member test",
+          "createdAt": 1574428852100,
+          "channelType": "Group",
+          "nsfw": false,
+          "active": 1,
+          "countNewMessages": 0,
+          "recipientLastSeenMessageTs": 1576833940013,
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1576833940013,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "icon": "06BFC02F-0E12-40FA-8B32-2F5C53BABACE",
+          "isPrivate": true
+        },
+        {
+          "createdAt": 1574762732232,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578458679743,
+              "lastSeenMessageTs": 1578458679743,
+              "accountId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+              "role": "@administrator"
+            },
+            {
+              "lastSeenMessageTs": 1578458679743,
+              "lastDeliveryMessageTs": 1578384401006,
+              "role": "@root",
+              "accountId": "10:13df13ba-2c4c-4f3a-ab12-c11ed165d662"
+            },
+            {
+              "lastSeenMessageTs": 1577555304767,
+              "lastDeliveryMessageTs": 1577555304767,
+              "accountId": "10:31faaf21-7fee-4111-992e-20272873a422",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1579001533455,
+              "lastDeliveryMessageTs": 1579001533455,
+              "accountId": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1579001557897,
+              "lastSeenMessageTs": 1578996358497,
+              "role": "@member",
+              "accountId": "10:442128e9-ba9e-4fcd-b23d-4b418ba198bf"
+            },
+            {
+              "lastSeenMessageTs": 1579001557897,
+              "lastDeliveryMessageTs": 1579001260398,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1578216003589,
+              "lastDeliveryMessageTs": 1578216003589,
+              "accountId": "10:adf9eb69-ef01-4163-bbb5-64027a8b3e34",
+              "role": "@member"
+            },
+            {
+              "lastSeenMessageTs": 1578458679743,
+              "lastDeliveryMessageTs": 1578913997699,
+              "role": "@member",
+              "accountId": "10:b5860dab-a439-4deb-981e-d3079072d7ce"
+            },
+            {
+              "lastDeliveryMessageTs": 1579001557897,
+              "lastSeenMessageTs": 1579001557897,
+              "accountId": "10:cdd65888-9817-44b8-9c68-30319814a691",
+              "role": "@member"
+            },
+            {
+              "lastDeliveryMessageTs": 1576135640024,
+              "lastSeenMessageTs": 1576135640024,
+              "role": "@member",
+              "accountId": "10:d1e06b9b-cf28-4381-917c-f212fe944abb"
+            },
+            {
+              "lastDeliveryMessageTs": 1579001557897,
+              "lastSeenMessageTs": 1579000855870,
+              "accountId": "10:dfc431cb-a53b-4be2-aafd-3de8ca8f5f34",
+              "role": "@member"
+            }
+          ],
+          "title": "Tamos official😎",
+          "roles": {
+            "@root": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            },
+            "@salom ba hamma": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            },
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            },
+            "@meshad": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "editAndDelete"
+            }
+          },
+          "recipientsCount": 11,
+          "lastMessage": {
+            "messageId": "202001269428490594422784",
+            "channelId": "7EB81931-57BA-4A3C-94DF-8EA83DB9546F",
+            "createdAt": 1579001557898,
+            "type": 1,
+            "state": 0,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "body": "1"
+          },
+          "recipientLastSeenMessageId": "202001269428490594422784",
+          "id": "7EB81931-57BA-4A3C-94DF-8EA83DB9546F",
+          "ownerId": "10:0ae026fd-2446-4b6c-9181-beb9778cb084",
+          "channelType": "Group",
+          "active": 1,
+          "countNewMessages": 0,
+          "nsfw": false,
+          "recipientLastSeenMessageTs": 1579001260398,
+          "lastPinnedMessage": {
+            "messageId": "202001269164777668874240",
+            "channelId": "7EB81931-57BA-4A3C-94DF-8EA83DB9546F",
+            "createdAt": 1578938683837,
+            "author": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+            "type": 1,
+            "state": 0,
+            "body": "коро бутун алафламиус ку"
+          },
+          "currentRecipientRole": "@member",
+          "recipientLastDeliveryMessageTs": 1579001260398,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "icon": "024216EB-E422-4352-82C6-23E240B36BE8",
+          "isPrivate": true
+        },
+        {
+          "createdAt": 1578911939514,
+          "id": "1EF17FBB-59C6-4400-A929-C54CDF21381B",
+          "lastMessage": {
+            "messageId": "202001269104411609927680",
+            "channelId": "1EF17FBB-59C6-4400-A929-C54CDF21381B",
+            "createdAt": 1578924291447,
+            "author": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a",
+            "state": 0,
+            "type": 1,
+            "body": "Total message sent: 100"
+          },
+          "title": "Test 1000",
+          "recipientsCount": 2,
+          "roles": {
+            "@member": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "changeRoleType": "edit"
+            },
+            "@administrator": {
+              "permission": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "changeRoleType": "nothing"
+            }
+          },
+          "recipientLastSeenMessageId": "202001269085957901258752",
+          "ownerId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "channelType": "Group",
+          "nsfw": false,
+          "active": 1,
+          "countNewMessages": 2897,
+          "recipientLastSeenMessageTs": 1578924291446,
+          "currentRecipientRole": "@administrator",
+          "recipientLastDeliveryMessageTs": 1578924291446,
+          "blacklist": {},
+          "currentRecipientDelivery": 0,
+          "recipients": [
+            {
+              "lastDeliveryMessageTs": 1578913313067,
+              "lastSeenMessageTs": 1578924291446,
+              "role": "@member",
+              "accountId": "10:3f404fc4-f15c-4241-892d-7dd38c3eb30a"
+            },
+            {
+              "lastDeliveryMessageTs": 1578924291446,
+              "lastSeenMessageTs": 1578919891739,
+              "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+              "role": "@administrator"
+            }
+          ],
+          "isPrivate": true
+        }
+      ]
+    },
+    "id": "82EBEC30-D245-4E14-AFF2-A17C73461209"
+  },
+  {
+    "params": [
+      {
+        "method": "message.send.notify",
+        "id": "CED4A290-B075-4A7D-8ADA-0AE93D202509",
+        "version": 3,
+        "params": {
+          "messageId": "202001269465140175310848",
+          "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA",
+          "body": "К",
+          "state": 0,
+          "type": 1,
+          "author": "10:84bf38eb-2f42-41cc-b445-6807a6ef916d",
+          "createdAt": 1579010295838.9949
+        }
+      },
+      {
+        "version": 3,
+        "method": "message.changeStatus.notify",
+        "id": "62A63358-6241-4C2D-AF83-AFCE4D253701",
+        "params": {
+          "messageId": "202001269465140175310848",
+          "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA",
+          "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+          "status": 2
+        }
+      },
+      {
+        "id": "107A9789-F82F-4076-85F8-88E209F9F658",
+        "method": "message.changeStatus.notify",
+        "version": 3,
+        "params": {
+          "status": 3,
+          "channelId": "0F854681-F318-4D19-ADF2-923F45F22ADA",
+          "messageId": "202001269465140175310848",
+          "accountId": "10:a5f96f50-a681-4ede-9605-00e545e129af"
+        }
+      }
+    ],
+    "id": "BDBBF070-6BF5-4CF2-8FB8-F879648C7FB3",
+    "method": "system.queuedMessages",
+    "version": 3
+  },
+  {
+    "method": "system.websocketReady",
+    "version": 3,
+    "params": {
+      "app_version": "v1.0.0 (beta)",
+      "account_id": "10:a5f96f50-a681-4ede-9605-00e545e129af",
+      "session_id": "61bd252c-9be8-4b3a-b408-b045d862aad2",
+      "platform": "macOS"
+    }
+  }
+]

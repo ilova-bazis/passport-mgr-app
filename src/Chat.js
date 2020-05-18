@@ -32,10 +32,10 @@ const style = theme => ({
 const Conversations = (props)=>{
 
     const clickHandler = (e)=>{
-        // console.log(e.target.id);
+        console.log(e.target);
         props.setConversation(Number(e.target.id));
     }
-    return props.conversation.map((val, idx)=>( <ListItem component={Link} to={'/chat/'+val.id} alignItems="flex-start" onClick={clickHandler} id={""+idx}>
+    return props.conversation.map((val, idx)=>(<ListItem component={Link} to={'/chat/'+val.id} alignItems="flex-start" onClick={clickHandler} id={idx}>
     <ListItemAvatar>
     <Avatar alt="Remy Sharp" src={"https://wssdev.nexustls.com/files/file/"+val.icon} />
     </ListItemAvatar>
@@ -48,9 +48,9 @@ const Conversations = (props)=>{
             variant="body2"
             color="textPrimary"
         >
-        {val.lastMessage.author}
+        { val.lastMessage !== undefined ? val.lastMessage.author : "empty"}
         </Typography>
-        {val.lastMessage.body}
+        {val.lastMessage !== undefined ? val.lastMessage.body : ""}
         </React.Fragment>
     }
     />
@@ -105,7 +105,7 @@ class Chat extends React.Component {
                         <Divider variant="inset" component="li" />
                         </List>
                     </Route>
-                    <Route exact path="/chat/:id">
+                    <Route exact  path="/chat/:id">
                         <ChatWindow conversation={this.state.conversation} sendWS={this.props.sendWS}></ChatWindow>
                     </Route>
                 </Switch>
